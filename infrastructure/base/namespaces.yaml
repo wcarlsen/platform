@@ -5,5 +5,5 @@ metadata:
   name: test
   labels:
     test-substitute: "${label}"
-    test-substitute-from-secret: "${label_from_secret}"
+    # test-substitute-from-secret: "${label_from_secret}"
     test-substitute-from-configmap: "${label_from_configmap}"
