@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: test
+  name: test
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+      - command:
+        - /bin/ash
+        - -c
+        - |
+          while true;
+          do
+            echo "${label_from_secret}"
+            sleep 2;
+          done
+        image: alpine:latest
+        name: alpine
