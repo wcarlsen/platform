@@ -11,3 +11,6 @@ spec:
     name: flux-system
   path: ./infrastructure/clusters/api/local
   prune: true
+  postBuild:
+    substitute:
+      label: this-is-a-test      
