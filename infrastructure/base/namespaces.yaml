@@ -4,4 +4,4 @@ kind: Namespace
 metadata:
   name: test
   labels:
-    test: test
+    test: "${label}"
