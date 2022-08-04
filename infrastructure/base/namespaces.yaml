@@ -4,4 +4,6 @@ kind: Namespace
 metadata:
   name: test
   labels:
-    test: "${label}"
+    test-substitute: "${label}"
+    test-substitute-from-secret: "${label-from-secret}"
+    test-substitute-from-configmap: "${label-from-configmap}"
